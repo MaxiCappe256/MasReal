@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets/normalize.css">
+    <link rel="stylesheet" href="assets/reset.css">
+    <link rel="stylesheet" href="assets/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nata+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="img/Logo3.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>+ Real</title>
+
+</head>
+
+<body>
+    <header class="header">
+        <button class="header__hamburg" id="menu-btn" aria-label="Abrir menú">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav class="navbar container">
+            <a href="index.html" class="navbar__title">Mas Real</a>
+
+            <div class="navbar__links">
+                <a href="index.html" class="navbar__link">Inicio</a>
+                <a href="#productos" class="navbar__link">Productos</a>
+                <a href="#sobre-nosotros" class="navbar__link">Sobre Nosotros</a>
+                <a href="#contacto" class="navbar__link" id="contacto">Concacto</a>
+            </div>
+        </nav>
+
+        <div class="borde-inferior"></div>
+    </header>
+
+    <section class="hero">
+        <h1 class="hero__texto">Sabemos lo que comemos, <br>por eso lo hacemos Mas Real.</h1>
+
+        <a href="#productos" class="hero__boton">Nuestros Productos</a>
+    </section>
+
+    <svg class="hero__svg" width="100%" height="100%" id="svg" viewBox="0 0 1440 390" xmlns="http://www.w3.org/2000/svg"
+        class="transition duration-300 ease-in-out delay-150">
+        <path
+            d="M 0,400 L 0,150 C 43.88323772766924,176.93428322186682 87.76647545533848,203.86856644373364 140,215 C 192.23352454466152,226.13143355626636 252.8173359063153,221.46001744693226 304,212 C 355.1826640936847,202.53998255306774 396.96418091940046,188.29136376853737 435,173 C 473.03581908059954,157.70863623146263 507.32594041608286,141.37452747891828 550,145 C 592.6740595839171,148.62547252108172 643.7320574162679,172.21052631578948 706,151 C 768.2679425837321,129.78947368421052 841.7458299188454,63.7833672579238 887,78 C 932.2541700811546,92.2166327420762 949.2846229083507,186.6560046525153 993,201 C 1036.7153770916493,215.3439953474847 1107.1156784477519,149.59261413201511 1165,118 C 1222.8843215522481,86.40738586798487 1268.2526633006423,88.97353881942425 1312,100 C 1355.7473366993577,111.02646118057575 1397.8736683496788,130.5132305902879 1440,150 L 1440,400 L 0,400 Z"
+            stroke="none" stroke-width="0" fill="#6c9a71" fill-opacity="1"
+            class="transition-all duration-300 ease-in-out delay-150 path-0" transform="rotate(-180 720 200)"></path>
+    </svg>
+
+    <main class="main container" id="productos">
+        <div class="main__search-container">
+            <h2 class="main__title">Nuestros Productos.</h2>
+
+            <input class="input__search" type="text" id="buscador" placeholder="Buscar productos...">
+        </div>
+
+
+        <div class="products-container">
+            <!-- Inyeccion de los productos del  -->
+        </div>
+    </main>
+
+    <img src="img/wave-top.png" alt="onda-decorativa" class="about__svg-top"  id="sobre-nosotros">
+
+    <section class="about">
+        <div class="about__container">
+            <div class="about__container-img">
+                <img src="img/Logo3.png" alt="Imagen Sobre Nosotros" class="container-img__img">
+            </div>
+
+            <div class="about__description">
+                <h2 class="description__title">Sobre Nosotros</h2>
+
+                <p class="description__paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum
+                    optio adipisci a labore ipsa repudiandae, ratione distinctio beatae harum sint laborum sequi
+                    perferendis repellat omnis minima voluptate, eum animi maxime.</p>
+            </div>
+        </div>
+    </section>
+
+    <img src="img/wave-bottom.png" alt="onda-decorativa" class="about__svg-bottom">
+
+    <section class="form container" id="contacto">
+        <div class="form__content">
+            <h3 class="form__title">Contactanos!</h3>
+
+            <form action="" class="form__container">
+                <div class="form__grid">
+                    <div class="form__name">
+                        <label class="form__label">Nombre:</label>
+                        <input type="text" class="form__input">
+                    </div>
+
+                    <div class="form__surname">
+                        <label class="form__label">Apellido:</label>
+                        <input type="text" class="form__input">
+                    </div>
+
+                    <div class="form__email">
+                        <label class="form__label">Correo Electronico:</label>
+                        <input type="email" class="form__input">
+                    </div>
+
+                    <div class="form__tel">
+                        <label class="form__label">Telefono:</label>
+                        <input type="tel" class="form__input">
+                    </div>
+                </div>
+                <div class="form__messaje">
+                    <label class="form__label">Mensaje:</label>
+                    <textarea class="form__textarea"></textarea>
+                </div>
+
+                <a href="#" class="form__button">Enviar Formulario</a>
+            </form>
+        </div>
+
+        <div class="form__redes">
+            <h3 class="redes__title">Nuestras Redes:</h3>
+
+            <div class="redes__container">
+                <div class="redes__instagram">
+                    <a href="#" class="redes__link">Instagram</a>
+                    <a href="https://www.instagram.com/mas.real_/" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+
+                <div class="redes__whatsapp">
+                    <a href="https://wa.me/+5493464499993?text=Hola%20quiero%20más%20información" target="_blank" class="redes__link">WhatsApp</a>
+                    <a href="">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <div class="footer__container container">
+            <p class="footer__paragraph">© 2025 Mas Real. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
