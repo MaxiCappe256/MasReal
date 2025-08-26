@@ -1,5 +1,5 @@
 // La ruta de tu archivo JSON local
-const PRODUCTS_JSON_URL = '../../json/products.json';
+const PRODUCTS_JSON_URL = '../json/products.json';
 const productsContainer = document.querySelector('.products-container');
 const searchInput = document.getElementById('buscador');
 
