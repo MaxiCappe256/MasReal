@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "nombre": "Hummus",
+    "precio": 300,
+    "imagen": "../img/producto.png",
+    "descripcion": "Miel casera consistencia dura, 100% casera desde Arequito - Santa Fe"
+  },
+
+  {
+    "id": 2,
+    "nombre": "Fideos Cortos",
+    "precio": 500,
+    "imagen": "../img/producto.png",
+    "descripcion": "Miel casera consistencia dura, 100% casera desde Arequito - Santa Fe"
+  },
+
+  {
+    "id": 3,
+    "nombre": "Leche de Almendras",
+    "precio": 100,
+    "imagen": "../img/producto.png",
+    "descripcion": "Miel casera consistencia dura, 100% casera desde Arequito - Santa Fe"
+  },
+
+  {
+    "id": 4,
+    "nombre": "Harina de Almendras",
+    "precio": 200,
+    "imagen": "../img/producto.png",
+    "descripcion": "Miel casera consistencia dura, 100% casera desde Arequito - Santa Fe"
+  },
+
+  {
+    "id": 5,
+    "nombre": "Frutos Secos",
+    "precio": 250,
+    "imagen": "../img/producto.png",
+    "descripcion": "Miel casera consistencia dura, 100% casera desde Arequito - Santa Fe"
+  },
+
+  {
+    "id": 6,
+    "nombre": "Miel",
+    "precio": 200,
+    "imagen": "../img/producto.png",
+    "descripcion": "Miel casera consistencia dura, 100% casera desde Arequito - Santa Fe"
+  },
+
+  {
+    "id": 7,
+    "nombre": "Fideos",
+    "precio": 300,
+    "imagen": "../img/producto.png",
+    "descripcion": "Miel casera consistencia dura, 100% casera desde Arequito - Santa Fe"
+  },
+
+  {
+    "id": 8,
+    "nombre": "Pasta de Mani",
+    "precio": 2400,
+    "imagen": "../img/producto.png",
+    "descripcion": "Miel casera consistencia dura, 100% casera desde Arequito - Santa Fe"
+  }
+  
+]

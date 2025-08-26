@@ -4,24 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="assets/normalize.css">
     <link rel="stylesheet" href="assets/reset.css">
     <link rel="stylesheet" href="assets/styles.css">
-
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
     <link href="https://fonts.googleapis.com/css2?family=Nata+Sans:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="icon" href="img/Logo3.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
-        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
     <title>+ Real</title>
-
+    
 </head>
 
 <body>
@@ -31,9 +34,11 @@
         </button>
 
         <nav class="navbar container">
-            <a href="index.html" class="navbar__title">Mas Real</a>
+            <div data-aos="fade-left" data-aos-duration="1500">
+                <a href="index.html" class="navbar__title">Mas Real</a>
+            </div>
 
-            <div class="navbar__links">
+            <div data-aos="fade-down" data-aos-duration="2000" class="navbar__links">
                 <a href="index.html" class="navbar__link">Inicio</a>
                 <a href="#productos" class="navbar__link">Productos</a>
                 <a href="#sobre-nosotros" class="navbar__link">Sobre Nosotros</a>
@@ -45,9 +50,14 @@
     </header>
 
     <section class="hero">
-        <h1 class="hero__texto">Sabemos lo que comemos, <br>por eso lo hacemos Mas Real.</h1>
-
-        <a href="#productos" class="hero__boton">Nuestros Productos</a>
+        <div class="hero__content">
+            <h1 data-aos="fade-right" data-aos-duration="2500" class="hero__texto">Sabemos lo que comemos, <br>por eso lo hacemos Mas Real.</h1>
+''
+        <div data-aos="fade-left" data-aos-duration="3000">            
+            <a href="#productos" class="hero__boton">Nuestros Productos</a>
+        </div>
+        </div>
+        
     </section>
 
     <svg class="hero__svg" width="100%" height="100%" id="svg" viewBox="0 0 1440 390" xmlns="http://www.w3.org/2000/svg"
@@ -71,7 +81,7 @@
         </div>
     </main>
 
-    <img src="img/wave-top.png" alt="onda-decorativa" class="about__svg-top"  id="sobre-nosotros">
+    <img src="img/wave-top.png" alt="onda-decorativa" class="about__svg-top" id="sobre-nosotros">
 
     <section class="about">
         <div class="about__container">
@@ -138,7 +148,8 @@
                 </div>
 
                 <div class="redes__whatsapp">
-                    <a href="https://wa.me/+5493464499993?text=Hola%20quiero%20más%20información" target="_blank" class="redes__link">WhatsApp</a>
+                    <a href="https://wa.me/+5493464499993?text=Hola%20quiero%20más%20información" target="_blank"
+                        class="redes__link">WhatsApp</a>
                     <a href="">
                         <i class="fa-brands fa-whatsapp"></i>
                     </a>
@@ -154,8 +165,13 @@
             <p class="footer__paragraph">© 2025 Mas Real. Todos los derechos reservados.</p>
         </div>
     </footer>
-
     <script src="./js/script.js"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
 </body>
 
 </html>

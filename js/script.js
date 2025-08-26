@@ -1,5 +1,5 @@
 // La ruta de tu archivo JSON local
-const PRODUCTS_JSON_URL = './json/productos.json';
+const PRODUCTS_JSON_URL = '../../json/products.json';
 const productsContainer = document.querySelector('.products-container');
 const searchInput = document.getElementById('buscador');
 
@@ -38,6 +38,7 @@ function displayProducts(products) {
             <div class="product__description">
                 <h3 class="product__title">${product.nombre}</h3>
                 <p class="product__price">$${product.precio}</p>
+                <a href="../pages/productos.html?id=${product.id}" class="product__link">Ver más</a>
             </div>
         `;
         productsContainer.appendChild(productElement);
