@@ -1,6 +1,6 @@
 const menuBtn = document.getElementById('menu-btn');
 const navLinks = document.querySelector('.navbar__links');
-const PRODUCTS_JSON_URL = '../json/productos.json';
+const PRODUCTS_JSON_URL = 'json/productos.json';
 const params = new URLSearchParams(window.location.search);
 const productId = parseInt(params.get('id'));
 

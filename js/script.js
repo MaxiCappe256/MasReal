@@ -77,7 +77,7 @@ formulario.addEventListener('submit', function (evento) {
 
 async function obtenerProductos() {
     try {
-        const archivo = '../json/productos.json';
+        const archivo = 'json/productos.json';
         const resultado = await fetch(archivo);
 
         if (!resultado.ok) {
