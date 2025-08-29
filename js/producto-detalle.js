@@ -1,5 +1,6 @@
-const PRODUCTS_JSON_URL = '../json/products.json';
-
+const menuBtn = document.getElementById('menu-btn');
+const navLinks = document.querySelector('.navbar__links');
+const PRODUCTS_JSON_URL = '../json/productos.json';
 const params = new URLSearchParams(window.location.search);
 const productId = parseInt(params.get('id'));
 
@@ -18,7 +19,7 @@ fetch(PRODUCTS_JSON_URL)
         const product = products.find(p => p.id === productId);
 
         if (!product) {
-            productContainer.innerHTML = '<p>No se encontro el producto</p>';
+            productContainer.innerHTML = '<p>No se encontró el producto</p>';
             return;
         }
 
@@ -32,11 +33,9 @@ fetch(PRODUCTS_JSON_URL)
                 <p class="producto__price">$${product.precio}</p>
             </div>
         `;
-    })
+    });
 
-// Tu código existente del menú hamburguesa
-const menuBtn = document.getElementById('menu-btn');
-const navLinks = document.querySelector('.navbar__links');
+
 
 menuBtn.addEventListener('click', () => {
     navLinks.classList.toggle('active');

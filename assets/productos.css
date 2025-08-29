@@ -163,19 +163,6 @@ body {
 
 }
 
-/* FOOTER */
-
-.footer {
-    background-color: var(--color2);
-    padding: 2rem 0;
-}
-
-.footer__paragraph {
-    text-align: center;
-    font-size: 1.5rem;
-    color: white;
-}
-
 
 
 /* PRODUCTOS PAGINA */
@@ -290,4 +277,18 @@ body {
 
 .producto__price:hover {
     transform: translateY(-10px);
+}
+
+
+/* FOOTER */
+
+.footer {
+    background-color: var(--color2);
+    padding: 2rem 0;
+}
+
+.footer__paragraph {
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
 }

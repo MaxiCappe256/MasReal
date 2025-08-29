@@ -3,7 +3,7 @@
     --colorFondo: #fefffe;
 
     --color1: #b5e6b8;
-    --color2: #6c9b70;
+    --color2: rgb(108, 155, 112);
 }
 
 html {
@@ -19,6 +19,29 @@ body {
     font-family: "Nata Sans", sans-serif;
     line-height: 1.5;
 }
+
+table {
+    border-collapse: collapse; /* elimina espacios entre celdas */
+    border-spacing: 0;         /* asegura que no haya separación */
+    width: 100%;               /* que ocupe todo el ancho disponible */
+    background: transparent;   /* sin fondo por defecto */
+}
+
+thead, tbody, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    box-shadow: none;
+}
+
+th, td {
+    font-size: 1.4rem;   /* ajustá según tu diseño */
+    text-align: left;   /* alineación de texto */
+    padding: .5rem;     /* espacio interno */
+    color: #333;        /* color de texto */
+}
+
 
 /* Globales */
 
@@ -38,7 +61,8 @@ body {
 
 @media (max-width: 768px) {
     .header {
-        position: relative;
+        padding: 1rem;
+        position: sticky;
     }
 }
 
@@ -60,6 +84,7 @@ body {
 }
 
 .navbar {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -70,6 +95,7 @@ body {
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
+        position: static;
     }
 }
 
@@ -98,6 +124,7 @@ body {
 
 .navbar__links {
     display: flex;
+    position: relative;
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
@@ -146,8 +173,25 @@ body {
     scale: 1.05;
 }
 
+.navbar__link--car {
+    position: absolute;
+    top: 22px;
+    right: 2.5rem;
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .navbar__link--car {
+        z-index: 2500;
+        top: 2.5rem;
+        right: 2.5rem;
+    }
+}
+
 .borde-inferior {
-    border-bottom: 2px solid var(--colorFondo);
+    /* border-bottom: 2px solid var(--colorFondo); */
 }
 
 #contacto {
@@ -210,6 +254,233 @@ body {
     transform: scale(1.1);
 }
 
+/* Carrito */
+
+/* .div-carrito {
+
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    height: 600px;
+    width: 500px;
+    top: 60px;
+    right: 80px;
+    border: 1px solid gray;
+    z-index: 2000;
+    border-radius: 20px;
+    opacity: 0;
+    transform: scale(0.8);
+    pointer-events: none; 
+    transform: translateY(-200px);
+    transition: all 250ms ease; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    box-shadow: 0px 0px 24px 1px rgba(0,0,0,0.2);
+
+}
+
+.div-carrito.active {
+    opacity: 1; 
+    transform: translateY(0);
+    transform: scale(1); 
+    pointer-events: auto;
+}
+
+#lista-carrito thead th {
+    font-size: 1.8rem;
+    color: gray;
+}
+
+#lista-carrito tbody {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+
+
+.div-carrito table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.div-carrito th,
+.div-carrito td {
+    font-size: 1.4rem;
+    padding: .5rem;
+    text-align: center;
+}
+
+.div-carrito th {
+    border-bottom: 1px solid #ccc;
+}
+
+.btn-vaciar-carrito {
+    display: inline-block;
+    font-size: 2rem;
+    color: white;
+    background-color: var(--color2);
+    padding: 1rem;
+    border-radius: 20px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.borrar-curso {
+    display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;        
+  height: 28px;
+  background-color: #e63946; 
+  color: #fff;        
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none; 
+  border-radius: 50%;   
+  cursor: pointer;
+}
+
+.btn-add-carrito {
+    font-size: 1.7rem;
+    text-align: center;
+    color: var(--color2);
+    font-weight: bold;
+    transition: all 250ms ease;
+    
+}
+
+.btn-add-carrito:hover {
+    text-decoration: underline;
+} */
+
+/* Carrito Mejorado */
+.div-carrito {
+    position: absolute;
+    top: 80px;
+    right: 2rem;
+    width: 450px;
+    max-height: 600px; /* Limita la altura del carrito */
+    overflow-y: auto; /* Agrega una barra de desplazamiento cuando el contenido se desborda verticalmente */
+    background-color: #fff;
+    border-radius: 1.5rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transform: translateY(-50px) scale(0.9);
+    pointer-events: none;
+    transition: all 0.3s ease;
+    z-index: 2000;
+    border: 2px solid var(--color2);
+}
+
+@media (max-width: 768px) {
+    .div-carrito {
+        width: 90%;
+        right: 5%;
+        top: 9rem;
+    }
+}
+
+
+.div-carrito.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+}
+
+#lista-carrito {
+    width: 100%;
+    border-collapse: collapse; /* Buena práctica para tablas, evita espacios extra */
+    margin-bottom: 1rem; /* Agrega espacio entre la tabla y el botón */
+}
+
+#lista-carrito th, #lista-carrito td {
+    padding: 0.5rem;
+    text-align: left;
+    border-bottom: 1px solid #dddddd;
+    /* vertical-align: top; */
+}
+
+#lista-carrito img {
+    max-width: 100px; /* Evita que las imágenes sean demasiado grandes */
+    height: auto;
+    border-radius: 8px;
+}
+
+
+
+
+
+
+
+
+
+.borrar-curso {
+    width: 32px;
+    height: 32px;
+    background-color: #e63946;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.borrar-curso:hover {
+    background-color: #c5303f;
+    transform: scale(1.05);
+}
+
+.btn-add-carrito {
+    display: inline-block;
+    background-color: var(--color2);
+    font-size: 1.7rem;
+    padding: 1rem 2rem;
+    border-radius: 3rem;
+    display: inline-block;
+    margin: 0 auto;
+    color: white;
+    font-weight: bold;
+    transition: all 250ms ease;
+}
+
+.btn-add-carrito:hover {
+    background-color: rgb(79, 113, 82);
+    box-shadow: 0px 0px 15px 15px rgba(108, 155, 112, .2);
+    transform: scale(1.05);
+}
+
+.btn-vaciar-carrito {
+    margin-top: 1rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #6c9b70;
+    padding: 1rem 2rem;
+    border-radius: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.btn-vaciar-carrito:hover {
+    background-color: #58825b;
+    transform: scale(1.05);
+}
+
+
 
 /* Productos */
 
@@ -248,7 +519,7 @@ body {
     border: 1px solid gray;
     height: 5rem;
     padding: 1rem 2rem;
-    box-shadow: 10px 10px 30px -13px rgba(0,0,0,0.3);
+
 }
 
 @media (max-width: 768px) {
@@ -300,17 +571,13 @@ body {
     transition: all 250ms ease-out;
 }
 
+
 @media (max-width: 768px) {
     .products-container__product {
         padding: 1rem;
     }
 }
 
-.products-container__product:hover {
-    transform: scale(1.03);
-    border: 1px solid var(--color2);
-    box-shadow: 5px 5px 9px 6px rgba(0, 0, 0, 0.1);
-}
 
 .product__container-img {
     max-width: 25rem;
@@ -339,6 +606,8 @@ body {
 }
 
 .product__price {
+    width: 10rem;
+    margin: 0 auto;
     font-size: 2.5rem;
     font-weight: bold;
     color: var(--color2);
@@ -347,13 +616,15 @@ body {
 }
 
 .product__link {
-    background-color: var(--color2);
-    font-size: 1.5rem;
-    padding: 1rem 2rem;
-    border-radius: 3rem;
-    display: inline-block;
-    width: 12rem;
-    margin: 0 auto;
+    color: var(--color2);
+    font-size: 2rem;
+    font-weight: bold;
+    transition: all 250ms ease;
+}
+
+
+.product__link:hover {
+    transform: scale(1.1);
 }
 
 /* About */
@@ -581,15 +852,33 @@ body {
     transition: all 250ms ease-in-out;
 }
 
+.error {
+    background-color: rgb(185, 0, 0);
+    text-align: center;
+    padding: 1rem;
+    color: white;
+    text-transform: uppercase;
+    margin-top: 4rem;
+    font-size: 2rem;
+    border-radius: 20px;
+}
+
+.correcto {
+    background-color: var(--color2);
+    text-align: center;
+    padding: 1rem;
+    color: white;
+    text-transform: uppercase;
+    margin-top: 4rem;
+    font-size: 2rem;
+    border-radius: 20px;
+}
+
 @media (max-width: 768px) {
     .form__button {
         font-size: 1.5rem;
         padding: .3rem .7rem;
     }
-}
-
-.form__button:hover {
-    transform: scale(1.05);
 }
 
 .redes__container {
